@@ -15,6 +15,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -24,10 +25,40 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: #F8FAFC;
     color: #1e293b;
+    overscroll-behavior-y: none;
   }
 
   ::selection {
     background-color: #003366;
     color: #F8FAFC;
   }
+
+  /* Touch-friendly active states */
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Prevent iOS zoom on inputs */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Custom scrollbar hide for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile sidebar overlay */
+.sidebar-overlay {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }

@@ -89,13 +89,15 @@ export default function TechnicalDetail() {
                   <Mail size={16} />
                   Teknik Bilgi Talep Edin
                 </motion.a>
-                <motion.button
+                <motion.a
+                  href="/DOSE-PRO-X200-Datasheet.pdf"
+                  download="DOSE-PRO-X200-Datasheet.pdf"
                   whileTap={{ scale: 0.97 }}
                   className="flex items-center justify-center gap-2 w-full bg-white/10 hover:bg-white/20 active:bg-white/25 text-white py-3.5 sm:py-3 rounded-xl font-semibold text-sm transition-colors"
                 >
                   <FileDown size={16} />
                   PDF Datasheet Indir
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </motion.div>

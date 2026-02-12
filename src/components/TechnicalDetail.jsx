@@ -73,7 +73,7 @@ export default function TechnicalDetail() {
               </div>
               <div className="relative h-40 sm:h-52">
                 <img
-                  src="https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?w=600&q=80"
+                  src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&q=80"
                   alt="DOSE-PRO X200"
                   className="w-full h-full object-cover object-center opacity-60"
                 />

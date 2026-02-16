@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { Target, Users, Globe, TrendingUp } from 'lucide-react';
 
 const stats = [
-  { value: '40+', label: 'Urun Cesidi', icon: Target },
-  { value: '150+', label: 'Kurumsal Musteri', icon: Users },
-  { value: '12', label: 'Ulkede Hizmet', icon: Globe },
-  { value: '25+', label: 'Yillik Deneyim', icon: TrendingUp },
+  { value: '80+', label: 'Ürün Çeşidi', icon: Target },
+  { value: '9', label: 'Ürün Kategorisi', icon: Users },
+  { value: '15+', label: 'Yıllık Deneyim', icon: TrendingUp },
+  { value: '81', label: 'İlde Hizmet', icon: Globe },
 ];
 
 export default function About() {
@@ -13,7 +13,6 @@ export default function About() {
     <section id="hakkimizda" className="py-16 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -21,33 +20,41 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-2 sm:mb-3">
-              Hakkimizda
+              Hakkımızda
             </p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy mb-4 sm:mb-6 leading-tight">
-              Tibbi Radyasyon Teknolojilerinde{' '}
-              <span className="text-accent">Guvenilir Cozum Ortaginiz</span>
+              Nükleer Tıp'ta{' '}
+              <span className="text-accent">Çözüm Ortağınız</span>
             </h2>
             <div className="space-y-3 sm:space-y-4 text-slate-600 text-sm leading-relaxed">
               <p>
-                MedicalZ, 25 yili askin sektordeki deneyimi ile Turkiye ve
-                bolge ulkelerinde tibbi cihaz, radyasyon olcum sistemleri ve
-                dozimetri cozumleri alaninda oncu bir kurulustur.
+                Picorad Medikal, 15 yılı aşkın sektör deneyimi ile Türkiye'de
+                nükleer tıp cihazları, radyasyon ölçüm sistemleri ve
+                radyofarmasötik üretim ekipmanları alanında öncü bir kuruluştur.
               </p>
               <p>
-                Dunyanin onde gelen uretici firmalari ile resmi distributorluk
-                anlasmalarina sahip sirketimiz, hastanelere, arastirma
-                merkezlerine ve endustriyel tesislere uluslararasi standartlarda
-                urunler ve muhendislik hizmetleri sunmaktadir.
+                Önceliğimiz, ürünlerimiz ile hastaların tedavi kalitesini
+                iyileştirmektir. Müşteri odaklı yaklaşımımız, güven, tecrübe ve
+                yeni teknoloji değerlerimiz ile sektörde fark yaratıyoruz.
               </p>
               <p>
-                ISO 13485 kalite yonetim sistemimiz ve TURKAK akredite kalibrasyon
-                laboratuvarimiz ile sektorde referans noktasi olmaya devam
-                ediyoruz.
+                Radyoaktif kalibrasyon kaynaklarından radyasyon zırhlama
+                çözümlerine, İyot-131 tank sistemlerinden radyofarmasötik
+                sentez cihazlarına kadar geniş ürün yelpazemiz ile hastanelere
+                ve araştırma merkezlerine anahtar teslim çözümler sunuyoruz.
               </p>
+            </div>
+
+            {/* Value pillars */}
+            <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
+              {['Müşteri Odaklı', 'Güven', 'Tecrübe', 'Yeni Teknoloji'].map((v, i) => (
+                <span key={i} className="text-xs font-medium bg-navy/5 text-navy px-3 py-1.5 rounded-full">
+                  {v}
+                </span>
+              ))}
             </div>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -73,11 +80,10 @@ export default function About() {
               ))}
             </div>
 
-            {/* Image */}
             <div className="mt-4 sm:mt-6 rounded-2xl overflow-hidden h-40 sm:h-48">
               <img
                 src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80"
-                alt="Laboratuvar"
+                alt="Nükleer Tıp Laboratuvarı"
                 className="w-full h-full object-cover object-center"
               />
             </div>

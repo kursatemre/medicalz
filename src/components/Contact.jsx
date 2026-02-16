@@ -6,6 +6,7 @@ import {
   Clock,
   Send,
   ArrowRight,
+  MessageCircle,
 } from 'lucide-react';
 
 export default function Contact() {
@@ -20,20 +21,19 @@ export default function Contact() {
           className="text-center mb-10 sm:mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-2 sm:mb-3">
-            Iletisim
+            İletişim
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy mb-3 sm:mb-4">
-            Bizimle Iletisime Gecin
+            Bizimle İletişime Geçin
           </h2>
           <p className="text-sm sm:text-base text-slate-medium max-w-2xl mx-auto">
-            Urunlerimiz ve hizmetlerimiz hakkinda detayli bilgi almak veya
-            teklif talep etmek icin bize ulasin.
+            Ürünlerimiz ve çözümlerimiz hakkında detaylı bilgi almak veya
+            teklif talep etmek için bize ulaşın.
           </p>
         </motion.div>
 
-        {/* Mobile: contact info first, then form */}
         <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
-          {/* Contact info - shown first on mobile via order */}
+          {/* Contact info - first on mobile */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -45,21 +45,30 @@ export default function Contact() {
               <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6">Merkez Ofis</h4>
               <div className="space-y-4 sm:space-y-5">
                 <ContactInfoRow icon={MapPin} label="Adres">
-                  Teknopark Istanbul, No: 1/2
+                  Molla Gürani Mah. Gureba Hastanesi Cad
                   <br />
-                  Pendik, Istanbul 34906
+                  No:21/A Fatih / İSTANBUL
                 </ContactInfoRow>
                 <ContactInfoRow icon={Phone} label="Telefon">
-                  <a href="tel:+902121234567" className="active:text-accent transition-colors">
-                    +90 (212) 123 45 67
+                  <a href="tel:+902125232300" className="active:text-accent transition-colors">
+                    +90 (212) 523 23 00
+                  </a>
+                  <br />
+                  <a href="tel:+902125232301" className="active:text-accent transition-colors">
+                    +90 (212) 523 23 01
+                  </a>
+                </ContactInfoRow>
+                <ContactInfoRow icon={MessageCircle} label="WhatsApp">
+                  <a href="https://wa.me/905330759723" className="active:text-accent transition-colors">
+                    +90 (533) 075 97 23
                   </a>
                 </ContactInfoRow>
                 <ContactInfoRow icon={Mail} label="E-posta">
-                  <a href="mailto:info@medicalz.com.tr" className="active:text-accent transition-colors">
-                    info@medicalz.com.tr
+                  <a href="mailto:info@picorad.com" className="active:text-accent transition-colors">
+                    info@picorad.com
                   </a>
                 </ContactInfoRow>
-                <ContactInfoRow icon={Clock} label="Calisma Saatleri">
+                <ContactInfoRow icon={Clock} label="Çalışma Saatleri">
                   Pazartesi - Cuma: 09:00 - 18:00
                   <br />
                   Cumartesi: 09:00 - 13:00
@@ -67,20 +76,19 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Quick CTA - thumb-friendly */}
             <div className="bg-accent/5 border border-accent/20 rounded-2xl p-5 sm:p-6">
               <h4 className="font-bold text-navy text-sm mb-2">
-                Acil Teknik Destek
+                WhatsApp Destek
               </h4>
               <p className="text-xs text-slate-500 mb-3 sm:mb-4">
-                Mevcut musterilerimiz icin 7/24 teknik destek hatti.
+                Hızlı yanıt için WhatsApp üzerinden bize ulaşın.
               </p>
               <a
-                href="tel:+908501234567"
+                href="https://wa.me/905330759723"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-dark active:text-accent-dark transition-colors py-1"
               >
-                <Phone size={14} />
-                0850 123 45 67
+                <MessageCircle size={14} />
+                WhatsApp ile Yazın
                 <ArrowRight size={14} />
               </a>
             </div>
@@ -100,33 +108,30 @@ export default function Contact() {
               </h3>
               <form className="space-y-4 sm:space-y-5">
                 <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
-                  <FormField label="Ad Soyad" placeholder="Adiniz Soyadiniz" type="text" />
-                  <FormField label="Kurum" placeholder="Kurum / Hastane Adi" type="text" />
+                  <FormField label="Ad Soyad" placeholder="Adınız Soyadınız" type="text" />
+                  <FormField label="Kurum" placeholder="Kurum / Hastane Adı" type="text" />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                   <FormField label="E-posta" placeholder="ornek@kurum.com.tr" type="email" />
                   <FormField label="Telefon" placeholder="+90 (5XX) XXX XX XX" type="tel" />
                 </div>
                 <div>
-                  <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-                    Konu
-                  </label>
-                  <select className="w-full px-4 py-3 sm:py-3 rounded-xl border border-slate-200 text-sm text-slate-600 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all bg-white appearance-none">
-                    <option>Teklif Talebi</option>
+                  <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">Konu</label>
+                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-600 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all bg-white appearance-none">
+                    <option>Ürün Teklif Talebi</option>
                     <option>Teknik Bilgi Talebi</option>
-                    <option>Kalibrasyon Hizmeti</option>
-                    <option>Egitim Programi</option>
-                    <option>Servis & Destek</option>
-                    <option>Diger</option>
+                    <option>İyot-131 Bakım/Onarım</option>
+                    <option>Radyasyon Zırhlama</option>
+                    <option>Tank Sistemi Kurulumu</option>
+                    <option>Yedek Parça</option>
+                    <option>Diğer</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-                    Mesajiniz
-                  </label>
+                  <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">Mesajınız</label>
                   <textarea
                     rows={4}
-                    placeholder="Ilgilendiginiz urunler, miktar, teknik gereksinimler vb."
+                    placeholder="İlgilendiğiniz ürünler, miktar, teknik gereksinimler vb."
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all resize-none"
                   />
                 </div>
@@ -135,7 +140,7 @@ export default function Contact() {
                   className="w-full flex items-center justify-center gap-2 bg-navy hover:bg-navy-light active:bg-navy-dark text-white py-4 sm:py-3.5 rounded-xl font-semibold text-sm transition-colors active:scale-[0.98]"
                 >
                   <Send size={16} />
-                  Talep Gonderin
+                  Talep Gönderin
                 </button>
               </form>
             </div>
@@ -163,9 +168,7 @@ function ContactInfoRow({ icon: Icon, label, children }) {
 function FormField({ label, placeholder, type }) {
   return (
     <div>
-      <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-        {label}
-      </label>
+      <label className="block text-[11px] sm:text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">{label}</label>
       <input
         type={type}
         placeholder={placeholder}

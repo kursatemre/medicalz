@@ -1,29 +1,30 @@
-import { Microscope } from 'lucide-react';
+import { Atom } from 'lucide-react';
 
 const productLinks = [
-  'Radyoterapi Dozimetri',
-  'Radyasyon Olcum',
-  'Kalite Kontrol',
-  'Nukleer Tip',
-  'Radyofarmasotik',
-  'Hasta Pozisyonlama',
-  'Yazilim Cozumleri',
+  'Radyoaktif Kalibrasyon Kaynakları',
+  'Radyasyon Ölçüm Sistemleri',
+  'Radyokoruyunum Ekipmanları',
+  'Gama Prob',
+  'Radyofarmasötik Sentez',
+  'Üretim Otomasyonu',
+  'İyot-131 Sistemleri',
+  'Fantom',
+  'Kurşunlu Kapı ve Pencereler',
 ];
 
-const serviceLinks = [
-  'Komisyonlama & Kurulum',
-  'Kalibrasyon',
-  'Egitim Programlari',
-  'Kalite Guvence',
-  'Teknik Destek',
+const solutionLinks = [
+  'İyot-131 Bakım & Onarım',
+  'Radyasyon Zırhlama',
+  'Tank Sistemleri Kurulumu',
+  'Proje & Lisanslama',
+  'Anahtar Teslim Kurulum',
 ];
 
 const companyLinks = [
-  'Hakkimizda',
+  'Hakkımızda',
   'Referanslar',
-  'Kariyer',
   'Blog',
-  'Iletisim',
+  'İletişim',
 ];
 
 export default function Footer() {
@@ -31,58 +32,44 @@ export default function Footer() {
     <footer className="bg-navy-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-6 sm:pb-8">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
-          {/* Brand - full width on mobile */}
+          {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 rounded-lg flex items-center justify-center">
-                <Microscope className="text-white" size={18} />
+                <Atom className="text-white" size={18} />
               </div>
               <span className="text-lg font-bold tracking-tight">
-                Medical<span className="text-accent">Z</span>
+                Pico<span className="text-accent">Rad</span>
               </span>
             </div>
             <p className="text-xs sm:text-sm text-white/50 leading-relaxed mb-3 sm:mb-4">
-              Tibbi radyasyon teknolojileri, dozimetri cozumleri ve
-              uzman muhendislik hizmetleri.
+              Nükleer tıp cihazları, radyasyon ölçüm sistemleri,
+              radyofarmasötik üretim ekipmanları ve mühendislik çözümleri.
             </p>
             <p className="text-[10px] sm:text-xs text-white/30">
-              ISO 13485 &middot; CE &middot; TURKAK Akredite
+              NDK Onaylı &middot; CE &middot; GMP &middot; ISO 13485
             </p>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">
-              Urunler
-            </h4>
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">Ürünler</h4>
             <ul className="space-y-2 sm:space-y-2.5">
               {productLinks.map((link, i) => (
                 <li key={i}>
-                  <a
-                    href="#urunler"
-                    className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block"
-                  >
-                    {link}
-                  </a>
+                  <a href="#urunler" className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block">{link}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">
-              Hizmetler
-            </h4>
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">Çözümler</h4>
             <ul className="space-y-2 sm:space-y-2.5">
-              {serviceLinks.map((link, i) => (
+              {solutionLinks.map((link, i) => (
                 <li key={i}>
-                  <a
-                    href="#hizmetler"
-                    className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block"
-                  >
-                    {link}
-                  </a>
+                  <a href="#cozumler" className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block">{link}</a>
                 </li>
               ))}
             </ul>
@@ -90,18 +77,11 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">
-              Kurumsal
-            </h4>
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/80 mb-3 sm:mb-4">Kurumsal</h4>
             <ul className="space-y-2 sm:space-y-2.5">
               {companyLinks.map((link, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block"
-                  >
-                    {link}
-                  </a>
+                  <a href="#" className="text-xs sm:text-sm text-white/40 hover:text-white active:text-accent transition-colors py-0.5 inline-block">{link}</a>
                 </li>
               ))}
             </ul>
@@ -111,18 +91,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[10px] sm:text-xs text-white/30 text-center sm:text-left">
-            &copy; 2026 MedicalZ Tibbi Teknoloji A.S. Tum haklari saklidir.
+            &copy; 2026 Picorad Medikal. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-4 sm:gap-6">
-            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">
-              Gizlilik Politikasi
-            </a>
-            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">
-              Kullanim Kosullari
-            </a>
-            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">
-              KVKK
-            </a>
+            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">Gizlilik Politikası</a>
+            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">Kullanım Koşulları</a>
+            <a href="#" className="text-[10px] sm:text-xs text-white/30 hover:text-white/60 active:text-white transition-colors py-1">KVKK</a>
           </div>
         </div>
       </div>

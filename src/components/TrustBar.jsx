@@ -9,12 +9,12 @@ import {
 } from 'lucide-react';
 
 const certifications = [
-  { icon: Shield, label: 'ISO 13485', desc: 'Tibbi Cihaz Kalite Yonetimi' },
-  { icon: BadgeCheck, label: 'CE Isareti', desc: 'Avrupa Uygunluk Belgesi' },
-  { icon: FileCheck, label: 'IEC 61217', desc: 'Radyoterapi Ekipman Standardi' },
-  { icon: Award, label: 'TURKAK', desc: 'Akreditasyon Belgesi' },
-  { icon: Globe, label: 'IAEA', desc: 'Uluslararasi Atom Enerjisi Ajansi' },
-  { icon: Building2, label: 'TAEK', desc: 'Turkiye Atom Enerjisi Kurumu' },
+  { icon: Shield, label: 'NDK', desc: 'Nükleer Düzenleme Kurumu Onaylı' },
+  { icon: BadgeCheck, label: 'CE İşareti', desc: 'Avrupa Uygunluk Belgesi' },
+  { icon: FileCheck, label: 'NCRP', desc: 'Radyasyon Zırhlama Standartları' },
+  { icon: Award, label: 'Class IIb', desc: 'Tıbbi Cihaz Sınıflandırması' },
+  { icon: Globe, label: 'GMP', desc: 'İyi Üretim Uygulamaları' },
+  { icon: Building2, label: 'ISO 13485', desc: 'Tıbbi Cihaz Kalite Yönetimi' },
 ];
 
 export default function TrustBar() {
@@ -29,10 +29,10 @@ export default function TrustBar() {
           className="text-center mb-8 sm:mb-10"
         >
           <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-1.5 sm:mb-2">
-            Guven & Kalite
+            Güven & Kalite
           </p>
           <h3 className="text-base sm:text-lg font-semibold text-navy">
-            Uluslararasi Sertifikalar ve Akreditasyonlar
+            Uluslararası Standartlar ve Uyumluluk
           </h3>
         </motion.div>
 

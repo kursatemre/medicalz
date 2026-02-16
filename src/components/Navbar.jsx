@@ -7,59 +7,73 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  Microscope,
+  Atom,
   Radiation,
   Activity,
   ShieldCheck,
-  Atom,
-  Pill,
-  ScanLine,
-  MonitorCog,
+  Crosshair,
+  FlaskConical,
+  Droplets,
+  Container,
+  Box,
+  DoorOpen,
   ArrowRight,
 } from 'lucide-react';
 
 const productCategories = [
   {
-    name: 'Radyoterapi Dozimetri Sistemleri',
+    name: 'Radyoaktif Kalibrasyon Kaynakları',
     icon: Radiation,
-    count: 8,
-    products: ['Ion Odasi Dozimetreleri', 'Film Dozimetri Sistemleri', 'TLD Okuyuculari', '3D Su Fantom Sistemleri'],
+    count: 3,
+    products: ['PET-CT / PET-MR Kalibrasyon Kaynakları', 'Doz Kalibratörü Kaynakları', 'Çubuk Kaynaklar'],
   },
   {
-    name: 'Radyasyon Olcum Cihazlari',
+    name: 'Radyasyon Ölçüm Sistemleri',
     icon: Activity,
     count: 7,
-    products: ['Portatif Doz Olcerler', 'Alan Monitormeri', 'Kisisel Dozimetreler', 'Kontaminasyon Olcerler'],
+    products: ['ISOMED 2162 Tiroid Uptake', 'ISOMED 2010 Doz Kalibratörü', 'ISOMED 2100 Kuyu Tipi Sayıcı', 'DolMo GM Survey Metre', 'CoMo 170-300 Sürvey Metre', 'ALMO Alan Monitörü', 'HFC El Ayak Monitörü'],
   },
   {
-    name: 'Kalite Kontrol Ekipmanlari',
+    name: 'Radyokoruyunum Ekipmanları',
     icon: ShieldCheck,
-    count: 6,
-    products: ['Lineer Hizlandirici QA Seti', 'CT Kalite Kontrol Fantom', 'Mekanik QA Aletleri', 'Isik Alan Analizoru'],
+    count: 12,
+    products: ['Çeker Ocak', 'Göğüs Zırhı', 'Kurşun Paravan', 'Enjektör Zırhları', 'Sentez Hücresi', 'Nükleer Tıp Mobilya'],
   },
   {
-    name: 'Nukleer Tip Cihazlari',
-    icon: Atom,
-    count: 5,
-    products: ['Doz Kalibratoru', 'Gamma Kamera Fantom', 'PET Kalite Kontrol Kiti', 'Kaynak Kalibrasyon Seti'],
+    name: 'Gama Prob',
+    icon: Crosshair,
+    count: 1,
+    products: ['CENNA-500W Kablosuz Gama Prob'],
   },
   {
-    name: 'Radyofarmasotik Urunler',
-    icon: Pill,
+    name: 'Radyofarmasötik Sentez Cihazları',
+    icon: FlaskConical,
     count: 4,
-    products: ['Radyokimyasal Saflick Analiz Cihazi', 'Aktivite Olcum Sistemi', 'Sterilite Test Kiti'],
+    products: ['FlexLab F-18 Sentez', 'Multisync Ga-68 / Lu-177', 'C-11 Sentez Cihazı', 'Filter Integrity Test'],
   },
   {
-    name: 'Hasta Pozisyonlama Sistemleri',
-    icon: ScanLine,
-    count: 5,
-    products: ['Termoplastik Maske Sistemi', 'Vakum Yatak Sistemi', 'Stereotaktik Cerceve', 'Lazer Pozisyonlama'],
+    name: 'Radyofarmasötik Üretim Otomasyonu',
+    icon: Droplets,
+    count: 4,
+    products: ['STINGRAY Mikro Akışkan', 'OCTOPUS Lu-177 Otomasyon', 'JELLYFISH 18F Otomasyon', 'CRAB Katı Hedef İşleme'],
   },
   {
-    name: 'Yazilim Cozumleri',
-    icon: MonitorCog,
-    count: 5,
-    products: ['Doz Analiz Yazilimi', 'QA Raporlama Platformu', 'Radyasyon Izleme SCADA', 'Hasta Takip Sistemi'],
+    name: 'İyot-131 Takip & Tank Sistemleri',
+    icon: Container,
+    count: 3,
+    products: ['PADOS Hasta İzleme', 'Atık Su Sayıcı', 'İyot-131 Tank Sistemleri'],
+  },
+  {
+    name: 'Fantom',
+    icon: Box,
+    count: 11,
+    products: ['Jaszczak Fantom', 'Hoffman 3D Beyin Fantom', 'NEMA PET Fantom', 'PET-BT Fantom', 'Sıcak Nokta Fantomları'],
+  },
+  {
+    name: 'Kurşunlu Kapı ve Pencereler',
+    icon: DoorOpen,
+    count: 2,
+    products: ['Kurşunlu Kapı', 'Kurşunlu Pencere'],
   },
 ];
 
@@ -75,7 +89,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when sidebar is open
   useEffect(() => {
     if (sidebarOpen) {
       document.body.style.overflow = 'hidden';
@@ -109,16 +122,16 @@ export default function Navbar() {
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-end gap-6 text-xs text-white/80">
-            <a href="tel:+902121234567" className="flex items-center gap-1 hover:text-white transition-colors">
-              <Phone size={12} /> +90 (212) 123 45 67
+            <a href="tel:+902125232300" className="flex items-center gap-1 hover:text-white transition-colors">
+              <Phone size={12} /> +90 (212) 523 23 00
             </a>
-            <a href="mailto:info@medicalz.com.tr" className="flex items-center gap-1 hover:text-white transition-colors">
-              <Mail size={12} /> info@medicalz.com.tr
+            <a href="mailto:info@picorad.com" className="flex items-center gap-1 hover:text-white transition-colors">
+              <Mail size={12} /> info@picorad.com
             </a>
           </div>
         </div>
 
-        {/* Main nav - compact on mobile */}
+        {/* Main nav */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group relative z-50">
@@ -127,7 +140,7 @@ export default function Navbar() {
                 scrolled || sidebarOpen ? 'bg-navy' : 'bg-white/10 backdrop-blur-sm'
               }`}
             >
-              <Microscope className="text-white" size={18} />
+              <Atom className="text-white" size={18} />
             </div>
             <div>
               <span
@@ -135,14 +148,14 @@ export default function Navbar() {
                   scrolled || sidebarOpen ? 'text-navy' : 'text-white'
                 }`}
               >
-                Medical<span className="text-accent">Z</span>
+                Pico<span className="text-accent">Rad</span>
               </span>
               <p
                 className={`text-[9px] sm:text-[10px] tracking-widest uppercase transition-colors ${
                   scrolled || sidebarOpen ? 'text-slate-medium' : 'text-white/60'
                 }`}
               >
-                Tibbi Teknoloji
+                Medikal
               </p>
             </div>
           </a>
@@ -162,7 +175,7 @@ export default function Navbar() {
                     : 'text-white/90 hover:text-white hover:bg-white/10'
                 }`}
               >
-                Urunler
+                Ürünler
                 <ChevronDown size={14} className={`transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
@@ -172,11 +185,11 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-2xl border border-slate-100 py-2"
+                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-2xl border border-slate-100 py-2"
                   >
                     <div className="px-4 py-2 border-b border-slate-100">
                       <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                        7 Kategori &middot; 40+ Urun
+                        9 Kategori &middot; 80+ Ürün
                       </p>
                     </div>
                     {productCategories.map((cat, i) => (
@@ -192,9 +205,9 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            <NavLink scrolled={scrolled} href="#hizmetler">Hizmetler</NavLink>
-            <NavLink scrolled={scrolled} href="#hakkimizda">Hakkimizda</NavLink>
-            <NavLink scrolled={scrolled} href="#iletisim">Iletisim</NavLink>
+            <NavLink scrolled={scrolled} href="#cozumler">Çözümler</NavLink>
+            <NavLink scrolled={scrolled} href="#hakkimizda">Hakkımızda</NavLink>
+            <NavLink scrolled={scrolled} href="#iletisim">İletişim</NavLink>
           </div>
 
           {/* Desktop CTA */}
@@ -203,7 +216,7 @@ export default function Navbar() {
               href="#iletisim"
               className="px-5 py-2.5 bg-accent hover:bg-accent-dark text-white text-sm font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-accent/25 active:scale-95"
             >
-              Teklif Alin
+              Teklif Alın
             </a>
           </div>
 
@@ -230,11 +243,10 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* ===== MOBILE SLIDE-IN SIDEBAR ===== */}
+      {/* MOBILE SLIDE-IN SIDEBAR */}
       <AnimatePresence>
         {sidebarOpen && (
           <>
-            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -243,8 +255,6 @@ export default function Navbar() {
               onClick={closeSidebar}
               className="fixed inset-0 z-40 bg-navy-dark/60 sidebar-overlay lg:hidden"
             />
-
-            {/* Sidebar panel */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -252,116 +262,58 @@ export default function Navbar() {
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
               className="fixed top-0 right-0 bottom-0 z-40 w-[85vw] max-w-sm bg-white shadow-2xl lg:hidden flex flex-col"
             >
-              {/* Sidebar header spacer */}
               <div className="h-16 shrink-0" />
-
-              {/* Scrollable content */}
               <div className="flex-1 overflow-y-auto overscroll-contain px-5 pb-6">
-                {/* Nav links */}
                 <div className="space-y-1 pt-2">
-                  <SidebarLink href="#anasayfa" onClick={closeSidebar}>
-                    Ana Sayfa
-                  </SidebarLink>
-
-                  {/* Products accordion */}
+                  <SidebarLink href="#anasayfa" onClick={closeSidebar}>Ana Sayfa</SidebarLink>
                   <div>
                     <button
                       onClick={() => setExpandedCat(expandedCat === 'products' ? null : 'products')}
                       className="w-full flex items-center justify-between px-4 py-3.5 text-base font-semibold text-navy rounded-xl hover:bg-slate-50 active:bg-slate-100 transition-colors"
                     >
-                      <span>Urunler</span>
+                      <span>Ürünler</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full font-medium">
-                          7 Kategori
-                        </span>
-                        <ChevronDown
-                          size={18}
-                          className={`text-slate-400 transition-transform duration-300 ${
-                            expandedCat === 'products' ? 'rotate-180' : ''
-                          }`}
-                        />
+                        <span className="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full font-medium">9 Kategori</span>
+                        <ChevronDown size={18} className={`text-slate-400 transition-transform duration-300 ${expandedCat === 'products' ? 'rotate-180' : ''}`} />
                       </div>
                     </button>
-
                     <AnimatePresence>
                       {expandedCat === 'products' && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          className="overflow-hidden"
-                        >
+                        <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: 'easeInOut' }} className="overflow-hidden">
                           <div className="pl-2 pr-1 pb-2 space-y-0.5">
                             {productCategories.map((cat, i) => (
-                              <CategoryAccordion
-                                key={i}
-                                category={cat}
-                                isExpanded={expandedCat === cat.name}
-                                onToggle={() =>
-                                  setExpandedCat(expandedCat === cat.name ? 'products' : cat.name)
-                                }
-                                onNavigate={closeSidebar}
-                              />
+                              <CategoryAccordion key={i} category={cat} isExpanded={expandedCat === cat.name} onToggle={() => setExpandedCat(expandedCat === cat.name ? 'products' : cat.name)} onNavigate={closeSidebar} />
                             ))}
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </div>
-
-                  <SidebarLink href="#hizmetler" onClick={closeSidebar}>
-                    Hizmetler
-                  </SidebarLink>
-                  <SidebarLink href="#hakkimizda" onClick={closeSidebar}>
-                    Hakkimizda
-                  </SidebarLink>
-                  <SidebarLink href="#iletisim" onClick={closeSidebar}>
-                    Iletisim
-                  </SidebarLink>
+                  <SidebarLink href="#cozumler" onClick={closeSidebar}>Çözümler</SidebarLink>
+                  <SidebarLink href="#hakkimizda" onClick={closeSidebar}>Hakkımızda</SidebarLink>
+                  <SidebarLink href="#iletisim" onClick={closeSidebar}>İletişim</SidebarLink>
                 </div>
-
-                {/* Divider */}
                 <div className="border-t border-slate-100 my-5" />
-
-                {/* Contact info */}
                 <div className="space-y-3 px-1">
-                  <a
-                    href="tel:+902121234567"
-                    className="flex items-center gap-3 px-3 py-3 rounded-xl bg-slate-50 active:bg-slate-100 transition-colors"
-                  >
-                    <div className="w-9 h-9 bg-navy/10 rounded-lg flex items-center justify-center shrink-0">
-                      <Phone size={16} className="text-navy" />
-                    </div>
+                  <a href="tel:+902125232300" className="flex items-center gap-3 px-3 py-3 rounded-xl bg-slate-50 active:bg-slate-100 transition-colors">
+                    <div className="w-9 h-9 bg-navy/10 rounded-lg flex items-center justify-center shrink-0"><Phone size={16} className="text-navy" /></div>
                     <div>
                       <p className="text-xs text-slate-400 font-medium">Telefon</p>
-                      <p className="text-sm font-semibold text-navy">+90 (212) 123 45 67</p>
+                      <p className="text-sm font-semibold text-navy">+90 (212) 523 23 00</p>
                     </div>
                   </a>
-                  <a
-                    href="mailto:info@medicalz.com.tr"
-                    className="flex items-center gap-3 px-3 py-3 rounded-xl bg-slate-50 active:bg-slate-100 transition-colors"
-                  >
-                    <div className="w-9 h-9 bg-navy/10 rounded-lg flex items-center justify-center shrink-0">
-                      <Mail size={16} className="text-navy" />
-                    </div>
+                  <a href="mailto:info@picorad.com" className="flex items-center gap-3 px-3 py-3 rounded-xl bg-slate-50 active:bg-slate-100 transition-colors">
+                    <div className="w-9 h-9 bg-navy/10 rounded-lg flex items-center justify-center shrink-0"><Mail size={16} className="text-navy" /></div>
                     <div>
                       <p className="text-xs text-slate-400 font-medium">E-posta</p>
-                      <p className="text-sm font-semibold text-navy">info@medicalz.com.tr</p>
+                      <p className="text-sm font-semibold text-navy">info@picorad.com</p>
                     </div>
                   </a>
                 </div>
               </div>
-
-              {/* Sticky bottom CTA */}
               <div className="shrink-0 p-5 border-t border-slate-100 bg-white">
-                <a
-                  href="#iletisim"
-                  onClick={closeSidebar}
-                  className="flex items-center justify-center gap-2 w-full py-4 bg-navy text-white font-semibold rounded-xl text-sm active:bg-navy-dark active:scale-[0.98] transition-all"
-                >
-                  Teklif Alin
-                  <ArrowRight size={16} />
+                <a href="#iletisim" onClick={closeSidebar} className="flex items-center justify-center gap-2 w-full py-4 bg-navy text-white font-semibold rounded-xl text-sm active:bg-navy-dark active:scale-[0.98] transition-all">
+                  Teklif Alın <ArrowRight size={16} />
                 </a>
               </div>
             </motion.div>
@@ -372,49 +324,24 @@ export default function Navbar() {
   );
 }
 
-/* Nested accordion for each product category */
 function CategoryAccordion({ category, isExpanded, onToggle, onNavigate }) {
   const Icon = category.icon;
   return (
     <div>
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center gap-3 px-3 py-3 rounded-xl text-left hover:bg-slate-50 active:bg-slate-100 transition-colors"
-      >
-        <div className="w-8 h-8 bg-navy/5 rounded-lg flex items-center justify-center shrink-0">
-          <Icon size={15} className="text-navy" />
-        </div>
+      <button onClick={onToggle} className="w-full flex items-center gap-3 px-3 py-3 rounded-xl text-left hover:bg-slate-50 active:bg-slate-100 transition-colors">
+        <div className="w-8 h-8 bg-navy/5 rounded-lg flex items-center justify-center shrink-0"><Icon size={15} className="text-navy" /></div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-slate-700 truncate">{category.name}</p>
-          <p className="text-[11px] text-slate-400">{category.count} urun</p>
+          <p className="text-[11px] text-slate-400">{category.count} ürün</p>
         </div>
-        <ChevronRight
-          size={14}
-          className={`text-slate-300 transition-transform duration-200 shrink-0 ${
-            isExpanded ? 'rotate-90' : ''
-          }`}
-        />
+        <ChevronRight size={14} className={`text-slate-300 transition-transform duration-200 shrink-0 ${isExpanded ? 'rotate-90' : ''}`} />
       </button>
-
       <AnimatePresence>
         {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
+          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden">
             <div className="pl-14 pr-3 pb-2 space-y-0.5">
               {category.products.map((product, j) => (
-                <a
-                  key={j}
-                  href="#urunler"
-                  onClick={onNavigate}
-                  className="block py-2.5 px-3 text-sm text-slate-500 hover:text-navy rounded-lg active:bg-slate-50 transition-colors"
-                >
-                  {product}
-                </a>
+                <a key={j} href="#urunler" onClick={onNavigate} className="block py-2.5 px-3 text-sm text-slate-500 hover:text-navy rounded-lg active:bg-slate-50 transition-colors">{product}</a>
               ))}
             </div>
           </motion.div>
@@ -426,27 +353,12 @@ function CategoryAccordion({ category, isExpanded, onToggle, onNavigate }) {
 
 function NavLink({ children, scrolled, href }) {
   return (
-    <a
-      href={href}
-      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
-        scrolled
-          ? 'text-slate-700 hover:text-navy hover:bg-slate-100'
-          : 'text-white/90 hover:text-white hover:bg-white/10'
-      }`}
-    >
-      {children}
-    </a>
+    <a href={href} className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${scrolled ? 'text-slate-700 hover:text-navy hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/10'}`}>{children}</a>
   );
 }
 
 function SidebarLink({ children, href, onClick }) {
   return (
-    <a
-      href={href}
-      onClick={onClick}
-      className="flex items-center px-4 py-3.5 text-base font-semibold text-navy rounded-xl hover:bg-slate-50 active:bg-slate-100 transition-colors"
-    >
-      {children}
-    </a>
+    <a href={href} onClick={onClick} className="flex items-center px-4 py-3.5 text-base font-semibold text-navy rounded-xl hover:bg-slate-50 active:bg-slate-100 transition-colors">{children}</a>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Atom, ArrowRight, Radiation, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Radiation, ShieldCheck } from 'lucide-react';
 
 export default function SplitEntry() {
   const [hoveredSide, setHoveredSide] = useState(null);
@@ -12,15 +12,13 @@ export default function SplitEntry() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute top-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 bg-black/30 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/15"
+        className="absolute top-3 sm:top-5 left-1/2 -translate-x-1/2 z-30"
       >
-        <Atom className="text-white w-4 h-4 sm:w-5 sm:h-5" />
-        <span className="text-sm sm:text-base font-bold tracking-tight text-white">
-          Pico<span className="text-accent">Rad</span>
-        </span>
-        <span className="text-[7px] sm:text-[8px] tracking-widest uppercase text-white/50 ml-0.5">
-          Medikal
-        </span>
+        <img
+          src="/PICORAD_LOGO-04.png"
+          alt="PicoRad Medikal"
+          className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-lg brightness-0 invert"
+        />
       </motion.div>
 
       {/* ===== Top / Left - Radyoaktif Kalibrasyon Kaynakları ===== */}

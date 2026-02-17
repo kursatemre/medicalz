@@ -17,7 +17,7 @@ export default function SplitEntry() {
         <img
           src="/PICORAD_LOGO-04.png"
           alt="PicoRad Medikal"
-          className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-lg brightness-0 invert"
+          className="h-16 sm:h-20 lg:h-24 w-auto drop-shadow-lg brightness-0 invert"
         />
       </motion.div>
 

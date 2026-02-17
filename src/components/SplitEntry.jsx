@@ -17,7 +17,8 @@ export default function SplitEntry() {
         <img
           src="/PICORAD_LOGO-04.png"
           alt="PicoRad Medikal"
-          className="h-16 sm:h-20 lg:h-24 w-auto drop-shadow-lg invert hue-rotate-180"
+          className="h-16 sm:h-20 lg:h-24 w-auto drop-shadow-lg"
+          style={{ filter: 'invert(1) hue-rotate(180deg) saturate(2.5) brightness(1.1)' }}
         />
       </motion.div>
 
